@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-005",
+  "synthetic": true,
+  "domain": "fictional environmental inspection",
+  "complaint": {
+    "claim": "The generated report dropped the measured value.",
+    "scope": "this recorded incident"
+  },
+  "task_contract": "Map the model field concentration_mg_l to stored concentrationMgL without changing its numeric value.",
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "kind": "schema_contract",
+      "content": "Model: concentration_mg_l number. Stored record: concentrationMgL number."
+    },
+    {
+      "evidence_id": "E2",
+      "kind": "mapping_trace",
+      "content": "Mapper lookup key: concentration; missing key fallback: 0."
+    }
+  ],
+  "trace": {
+    "raw_model_output": {
+      "concentration_mg_l": 3.2
+    },
+    "stored_record": {
+      "concentrationMgL": 0
+    },
+    "displayed_output": "Concentration: 0"
+  },
+  "missing_evidence": [],
+  "permitted_actions": [
+    "read supplied artifacts",
+    "propose isolated tests; no test execution supplied"
+  ],
+  "notice": "Fictional rules and values; not regulatory advice."
+}

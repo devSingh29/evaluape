@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-008",
+  "synthetic": true,
+  "domain": "fictional environmental inspection",
+  "complaint": {
+    "claim": "The report both showed the wrong value and applied an old inspection interval.",
+    "scope": "this recorded incident"
+  },
+  "task_contract": "Preserve concentration_mg_l as concentrationMgL; use current Grove protocol v2 interval of six months.",
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "kind": "source",
+      "content": "Grove v1: annual interval; superseded by v2 before this incident."
+    },
+    {
+      "evidence_id": "E2",
+      "kind": "index_manifest",
+      "content": "Only Grove v1 indexed."
+    },
+    {
+      "evidence_id": "E3",
+      "kind": "mapping_trace",
+      "content": "Mapper reads concentration instead of concentration_mg_l; fallback zero."
+    },
+    {
+      "evidence_id": "E4",
+      "kind": "current_source",
+      "content": "Grove v2: six-month interval."
+    }
+  ],
+  "trace": {
+    "selected_context": [
+      "E1"
+    ],
+    "raw_model_output": {
+      "concentration_mg_l": 2.5,
+      "interval_months": 12
+    },
+    "stored_record": {
+      "concentrationMgL": 0,
+      "intervalMonths": 12
+    }
+  },
+  "missing_evidence": [],
+  "permitted_actions": [
+    "read supplied artifacts",
+    "propose isolated tests; no test execution supplied"
+  ],
+  "notice": "Fictional rules and values; not regulatory advice."
+}

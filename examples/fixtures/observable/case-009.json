@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-009",
+  "synthetic": true,
+  "domain": "fictional environmental inspection",
+  "complaint": {
+    "claim": "The final answer changed pass to fail somewhere in the system.",
+    "scope": "this recorded incident"
+  },
+  "task_contract": "At measurement 3 and limit 5, output pass.",
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "kind": "task_record",
+      "content": "Measurement 3; limit 5; request r9."
+    },
+    {
+      "evidence_id": "E2",
+      "kind": "final_record",
+      "content": "Persisted/displayed result: fail; request r9."
+    },
+    {
+      "evidence_id": "E3",
+      "kind": "pipeline_manifest",
+      "content": "Model response passes through a status mapper before storage."
+    }
+  ],
+  "trace": {
+    "raw_model_output": null,
+    "mapping_trace": null,
+    "displayed_output": "fail"
+  },
+  "missing_evidence": [
+    "Raw model output",
+    "Mapper input/output trace"
+  ],
+  "permitted_actions": [
+    "read supplied artifacts",
+    "propose isolated tests; no test execution supplied"
+  ],
+  "notice": "Fictional rules and values; not regulatory advice."
+}

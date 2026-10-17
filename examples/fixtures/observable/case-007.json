@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-007",
+  "synthetic": true,
+  "domain": "fictional environmental inspection",
+  "complaint": {
+    "claim": "The answer used the wrong site threshold.",
+    "scope": "this recorded incident"
+  },
+  "task_contract": "Use the site-specific threshold current at request time.",
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "kind": "screenshot",
+      "content": "Displayed answer: threshold 10; pass."
+    },
+    {
+      "evidence_id": "E2",
+      "kind": "source_excerpt",
+      "content": "Current Harbor source says threshold 4; publication date not captured."
+    }
+  ],
+  "trace": {
+    "request_text": "Assess this sample.",
+    "raw_model_output": null,
+    "selected_context": null,
+    "displayed_output": "threshold 10; pass"
+  },
+  "missing_evidence": [
+    "Request timestamp",
+    "Site identifier supplied to model",
+    "Measurement",
+    "Retrieved context",
+    "Source version history",
+    "Raw model response"
+  ],
+  "permitted_actions": [
+    "read supplied artifacts",
+    "propose isolated tests; no test execution supplied"
+  ],
+  "notice": "Fictional rules and values; not regulatory advice."
+}

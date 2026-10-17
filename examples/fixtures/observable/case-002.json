@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-002",
+  "synthetic": true,
+  "domain": "fictional environmental inspection",
+  "complaint": {
+    "claim": "The answer missed the latest rule.",
+    "scope": "this recorded incident"
+  },
+  "task_contract": "Use the current Meadow protocol on incident date 2031-04-10.",
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "kind": "source",
+      "content": "Meadow protocol v1, superseded 2031-04-01: inspect annually."
+    },
+    {
+      "evidence_id": "E2",
+      "kind": "source_registry",
+      "content": "Meadow protocol v2 effective 2031-04-01: inspect every six months."
+    },
+    {
+      "evidence_id": "E3",
+      "kind": "index_manifest",
+      "content": "Index snapshot 2031-03-20 contains v1 only."
+    }
+  ],
+  "trace": {
+    "incident_date": "2031-04-10",
+    "selected_context": [
+      "E1"
+    ],
+    "raw_model_output": "Inspect annually under v1.",
+    "displayed_output": "Inspect annually."
+  },
+  "missing_evidence": [],
+  "permitted_actions": [
+    "read supplied artifacts",
+    "propose isolated tests; no test execution supplied"
+  ],
+  "notice": "Fictional rules and values; not regulatory advice."
+}

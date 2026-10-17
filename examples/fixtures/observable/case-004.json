@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-004",
+  "synthetic": true,
+  "domain": "fictional environmental inspection",
+  "complaint": {
+    "claim": "The assistant gave the wrong compliance decision.",
+    "scope": "this recorded incident"
+  },
+  "task_contract": "For this fictional task, fail only if both concentration > 5 and duration > 10; otherwise pass.",
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "kind": "measurement",
+      "content": "Concentration 7; duration 8."
+    },
+    {
+      "evidence_id": "E2",
+      "kind": "selected_rule",
+      "content": "Fail iff concentration > 5 AND duration > 10."
+    }
+  ],
+  "trace": {
+    "selected_context": [
+      "E1",
+      "E2"
+    ],
+    "raw_model_output": "Concentration exceeds 5, so the combined condition is true. Fail.",
+    "displayed_output": "fail"
+  },
+  "missing_evidence": [],
+  "permitted_actions": [
+    "read supplied artifacts",
+    "propose isolated tests; no test execution supplied"
+  ],
+  "notice": "Fictional rules and values; not regulatory advice."
+}

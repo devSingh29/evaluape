@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-006",
+  "synthetic": true,
+  "domain": "fictional environmental inspection",
+  "complaint": {
+    "claim": "The LLM ignored my revised reading and kept the old answer.",
+    "scope": "this recorded incident"
+  },
+  "task_contract": "Render the answer for the current request ID after edits.",
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "kind": "request_log",
+      "content": "Request q1: reading 2. Request q2: reading 8."
+    },
+    {
+      "evidence_id": "E2",
+      "kind": "render_trace",
+      "content": "Active request q2; cache lookup key facility_id only; returned cached q1 view."
+    }
+  ],
+  "trace": {
+    "model_responses": {
+      "q1": "Reading 2",
+      "q2": "Reading 8"
+    },
+    "active_request_id": "q2",
+    "displayed_output": "Reading 2"
+  },
+  "missing_evidence": [],
+  "permitted_actions": [
+    "read supplied artifacts",
+    "propose isolated tests; no test execution supplied"
+  ],
+  "notice": "Fictional rules and values; not regulatory advice."
+}
