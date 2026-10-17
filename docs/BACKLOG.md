@@ -1,6 +1,6 @@
 # Prioritized planning backlog
 
-These are proposed issue bodies, not created GitHub issues, assigned work, or permission to execute the MVP. Public repository ownership is decided: `devSingh29/evaluape`. Priorities express recommended sequencing, not committed dates. The owner must approve implementation and external actions separately.
+The ten planning issues below are published in GitHub. They are planning proposals, not assigned implementation work or permission to execute the MVP. Public repository ownership is decided: `devSingh29/evaluape`. Priorities express recommended sequencing, not committed dates. The owner must approve implementation and external actions separately.
 
 ## Planning label manifest
 
@@ -21,6 +21,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 
 ## 01 — Finalize licensing and publication readiness
 
+**GitHub issue:** [#1](https://github.com/devSingh29/evaluape/issues/1)
+
 **Priority/labels:** P0 · planning · decision-needed · blocked-approval
 
 **Outcome:** Record the approved public destination `devSingh29/evaluape`, resolve license choice and copyright holder, and check all artifacts for public sharing.
@@ -30,6 +32,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 **Dependencies/approvals:** Public repository creation and publication at the approved destination are authorized and handled by the coordinating maintainer. License application still requires owner approval; do not independently duplicate remote actions.
 
 ## 02 — Define the target diagnostic job
+
+**GitHub issue:** [#2](https://github.com/devSingh29/evaluape/issues/2)
 
 **Priority/labels:** P0 · planning · research
 
@@ -41,6 +45,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 
 ## 03 — Validate competitive assumptions
 
+**GitHub issue:** [#3](https://github.com/devSingh29/evaluape/issues/3)
+
 **Priority/labels:** P0 · planning · research
 
 **Outcome:** Compare the proposed workflow with current LangSmith Engine, Raindrop, Braintrust, and Arize AX capabilities.
@@ -50,6 +56,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 **Dependencies/approvals:** Issue 02 informs relevance. Read-only research only; vendor account creation or trials are not authorized.
 
 ## 04 — Specify the diagnostic evidence contract
+
+**GitHub issue:** [#4](https://github.com/devSingh29/evaluape/issues/4)
 
 **Priority/labels:** P0 · planning · evidence
 
@@ -61,6 +69,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 
 ## 05 — Curate synthetic diagnostic cases and oracle boundaries
 
+**GitHub issue:** [#5](https://github.com/devSingh29/evaluape/issues/5)
+
 **Priority/labels:** P0 · planning · evidence · evaluation
 
 **Outcome:** Review a small, intentionally varied synthetic case set and its separate evaluation-only answer material.
@@ -70,6 +80,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 **Dependencies/approvals:** Issue 04; synthetic authoring only. No live or redacted real traces.
 
 ## 06 — Pre-register the comparison protocol
+
+**GitHub issue:** [#6](https://github.com/devSingh29/evaluape/issues/6)
 
 **Priority/labels:** P0 · planning · evaluation · decision-needed
 
@@ -81,6 +93,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 
 ## 07 — Review privacy and threat model
 
+**GitHub issue:** [#7](https://github.com/devSingh29/evaluape/issues/7)
+
 **Priority/labels:** P1 · planning · privacy-security
 
 **Outcome:** Identify threats arising from traces, imports, exports, prompt injection, model calls, and future integrations.
@@ -90,6 +104,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 **Dependencies/approvals:** Issue 04. No penetration testing, credential handling, or security-setting changes.
 
 ## 08 — Review architecture and scope exclusions
+
+**GitHub issue:** [#8](https://github.com/devSingh29/evaluape/issues/8)
 
 **Priority/labels:** P1 · planning · decision-needed
 
@@ -101,6 +117,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 
 ## 09 — Request a bounded technical experiment
 
+**GitHub issue:** [#9](https://github.com/devSingh29/evaluape/issues/9)
+
 **Priority/labels:** P1 · planning · blocked-approval · evaluation
 
 **Outcome:** Prepare a decision packet for a possible future spike, not the spike itself.
@@ -110,6 +128,8 @@ The ten labels below have been created at [devSingh29/evaluape/labels](https://g
 **Dependencies/approvals:** Issues 01 and 04–08. Owner may reject or narrow the experiment. This backlog does not approve it.
 
 ## 10 — Design the post-experiment decision review
+
+**GitHub issue:** [#10](https://github.com/devSingh29/evaluape/issues/10)
 
 **Priority/labels:** P2 · planning · evaluation
 
