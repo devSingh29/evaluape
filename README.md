@@ -37,3 +37,12 @@ Open source is the intended direction, but a license has **not** been selected o
 ## Start here
 
 Read the [decision brief](docs/DECISION-BRIEF.md) for recommendations, trade-offs and approval questions. See [clean-room design-partner scenarios](docs/DESIGN-PARTNER-SCENARIOS.md) for general-purpose examples and boundaries.
+
+## Before implementation
+
+- [Engineering readiness and scalability](docs/ENGINEERING-READINESS.md)
+- [Governance, contribution and future release plan](docs/GOVERNANCE.md)
+- [Decision register](docs/DECISIONS.md) and [architecture decision template](docs/ADR-TEMPLATE.md)
+- [Ape-themed planning skills](docs/APE-SKILLS.md): Scout, Sleuth, Lab, Guardian, Architect and Review
+
+These are reviewed planning aids, not a claim that runtime controls, CI, releases or diagnostic performance have been implemented. The small local-file exclusion list helps avoid common accidental uploads but is not a secret scanner; review every public change.

@@ -27,3 +27,9 @@ Record evidence that could refute the product hypothesis. Cite competitors fairl
 Use a descriptively named `codex/<task-name>` branch, such as `codex/synthetic-diagnosis-spike`, for approved implementation work. Branch naming does not itself authorize work. Confirm repository ownership, author identity, scope, data rules, dependencies, evaluation criteria, and permitted external actions before beginning. Do not reuse inherited Git author identity or assume remote push permission.
 
 Keep changes reviewable, document tests and limitations, and separate an experimental prototype from a production or security claim. Follow the approved evaluation plan and stop at its decision gate.
+
+## Ape-themed planning skills
+
+Repository-local workflows live in `.agents/skills/`; see [the skill index](docs/APE-SKILLS.md). Select only the relevant workflow: Ape Scout researches, Ape Sleuth examines evidence, Ape Lab designs experiments, Ape Guardian reviews trust/privacy, Ape Architect compares designs, and Ape Review checks readiness. These are instructions for planning/review, not application features or automatic execution grants. Do not install them globally or infer permission to run experiments, spend money, publish externally or implement the MVP from their presence.
+
+Use [the decision register](docs/DECISIONS.md) to distinguish directed scope from proposals. Follow [engineering readiness](docs/ENGINEERING-READINESS.md) and [governance](docs/GOVERNANCE.md) when their review is relevant; their future controls are not already enabled merely because they are documented.

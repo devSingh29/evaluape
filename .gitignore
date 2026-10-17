@@ -1,0 +1,16 @@
+# Local credentials and environment files must never enter this public repository.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+# Local-only investigation inputs and scratch outputs; synthetic fixtures belong in examples/fixtures/.
+.local/
+private-data/
+replay-scratch/
+# Editor/OS caches.
+.DS_Store
+__pycache__/
+*.py[cod]
