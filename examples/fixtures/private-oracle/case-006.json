@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-006",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "app_bug_blamed_on_llm",
+  "expected_adjudication": "substantiated",
+  "causal_locations": [
+    "application_cache_rendering"
+  ],
+  "oracle_explanation": "The user-visible stale-answer symptom is real. The assertion that the LLM ignored the edit is unsupported by q2 output; grade the symptom separately from the asserted cause.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "target": "render cache",
+    "change": "Bypass cached q1 view and render q2 response without another model call.",
+    "oracle_expected_outcome": "Display Reading 8; restoring stale cache recreates symptom.",
+    "limits": "An expected counterfactual is not an observed test result."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Catch q1 display while q2 is active.",
+    "healthy_variant_expectation": "Display q2 and ensure request-specific invalidation.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "Adjudication substantiated applies to the recorded stale-answer symptom; the explicit LLM-cause subclaim must be marked unsupported. Split compound claims before scoring.",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts.",
+  "atomic_claim_labels": [
+    {
+      "claim": "The displayed answer is stale for the revised request.",
+      "verdict": "substantiated"
+    },
+    {
+      "claim": "The LLM ignored the revised input.",
+      "verdict": "unsupported"
+    }
+  ]
+}

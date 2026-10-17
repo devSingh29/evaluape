@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-004",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "model_reasoning_mistake",
+  "expected_adjudication": "substantiated",
+  "causal_locations": [
+    "model_reasoning"
+  ],
+  "oracle_explanation": "The raw response contradicts an explicit conjunction despite correct supplied evidence. A model-output reasoning error is observed; internals or training cause are not known.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "target": "decision evaluation",
+    "change": "Hold inputs fixed and evaluate the stated Boolean conjunction independently.",
+    "oracle_expected_outcome": "False conjunction; pass. A new model run may be stochastic and is not guaranteed to fix it.",
+    "limits": "An expected counterfactual is not an observed test result."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Catch fail when only one conjunct is true.",
+    "healthy_variant_expectation": "Pass correct conjunction evaluation and also test both-true case.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts."
+}

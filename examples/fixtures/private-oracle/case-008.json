@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-008",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "missing_or_outdated_knowledge",
+  "expected_adjudication": "substantiated",
+  "causal_locations": [
+    "knowledge_freshness",
+    "schema_mapping"
+  ],
+  "oracle_explanation": "Two independent faults produce distinct symptoms. Fixing one cannot be credited as resolving the full complaint.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "design": "2x2 factorial: original/current knowledge crossed with wrong/correct mapper key.",
+    "oracle_expected_outcomes": {
+      "original_wrong": "0 and 12 months",
+      "current_wrong": "0 and 6 months",
+      "original_correct": "2.5 and 12 months",
+      "current_correct": "2.5 and 6 months"
+    },
+    "limits": "Illustrative deterministic expectations; actual intervention execution is absent."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Catch each single fault and both together.",
+    "healthy_variant_expectation": "Pass only when 2.5 and six months are preserved.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "Multi-causal negative for single-root-cause systems; give partial set credit, not full credit for one cause.",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts."
+}

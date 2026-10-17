@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-005",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "schema_mapping_failure",
+  "expected_adjudication": "substantiated",
+  "causal_locations": [
+    "schema_mapping"
+  ],
+  "oracle_explanation": "The model supplied 3.2; the observed mapper reads a different key and substitutes zero.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "target": "mapper key",
+    "change": "Read concentration_mg_l with identical raw model object.",
+    "oracle_expected_outcome": "Stored concentrationMgL becomes 3.2; restoring wrong key yields zero.",
+    "limits": "An expected counterfactual is not an observed test result."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Catch zero substitution for valid 3.2.",
+    "healthy_variant_expectation": "Preserve 3.2 and reject absent fields rather than silently using zero.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts."
+}

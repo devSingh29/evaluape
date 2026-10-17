@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-009",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "app_bug_blamed_on_llm",
+  "expected_adjudication": "substantiated",
+  "causal_locations": [],
+  "oracle_explanation": "The final result violates the contract. Model reasoning and mapper corruption are observationally equivalent without boundary traces; substantiated symptom does not establish root cause.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "target": "boundary tracing",
+    "change": "Obtain raw model output and mapper input/output for r9.",
+    "oracle_expected_outcome": "Pass before mapper localizes downstream corruption; fail before mapper supports an upstream issue, subject to input evidence.",
+    "limits": "An expected counterfactual is not an observed test result."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Catch the fail result at the end-to-end boundary.",
+    "healthy_variant_expectation": "Pass correct final result; leave component attribution unresolved until boundary evidence arrives.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "Ambiguous-cause negative. Correct complaint adjudication with localization abstention is the desired outcome.",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts.",
+  "atomic_claim_labels": [
+    {
+      "claim": "The final answer violates the pass/fail contract.",
+      "verdict": "substantiated"
+    },
+    {
+      "claim": "A specific model or mapper component caused the error.",
+      "verdict": "unresolved"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-003",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "unsupported_complaint",
+  "expected_adjudication": "unsupported",
+  "causal_locations": [],
+  "oracle_explanation": "The recorded computation is correct for the declared readings. This refutes only the recorded numerical claim, not a claim about unseen readings.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "target": "independent calculation",
+    "change": "Recompute the same inputs without changing them.",
+    "oracle_expected_outcome": "4; no defect reproduced.",
+    "limits": "An expected counterfactual is not an observed test result."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Catch an output of 8 on these inputs.",
+    "healthy_variant_expectation": "Pass output 4; do not file a model defect.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts."
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-002",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "missing_or_outdated_knowledge",
+  "expected_adjudication": "substantiated",
+  "causal_locations": [
+    "knowledge_freshness"
+  ],
+  "oracle_explanation": "Current source is absent from the index; the model accurately summarized stale context.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "target": "knowledge snapshot",
+    "change": "Add v2 and require current-effective selection.",
+    "oracle_expected_outcome": "Six-month interval; separately verify selection does not retain v1.",
+    "limits": "An expected counterfactual is not an observed test result."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Catch annual interval after v2 takes effect.",
+    "healthy_variant_expectation": "Pass six-month interval with v2 provenance.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts."
+}

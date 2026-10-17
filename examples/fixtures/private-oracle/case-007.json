@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-007",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "wrong_retrieved_context",
+  "expected_adjudication": "unresolved",
+  "causal_locations": [],
+  "oracle_explanation": "Could be wrong context, stale knowledge, an older valid rule, or rendering. The available evidence cannot adjudicate the time/site-specific claim.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "target": "evidence acquisition",
+    "change": "Obtain timestamp, site, source history, retrieval and raw response before rerunning.",
+    "oracle_expected_outcome": "Information may distinguish hypotheses; no specific causal outcome is promised.",
+    "limits": "An expected counterfactual is not an observed test result."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Flag incomplete evidence instead of assigning a root cause.",
+    "healthy_variant_expectation": "Produce resolved verdict only when time/site/source evidence is complete.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "Insufficient-evidence negative. Confident retrieval or freshness blame is a false accusation.",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts."
+}
