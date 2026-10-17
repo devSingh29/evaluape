@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-001",
+  "synthetic": true,
+  "domain": "fictional environmental inspection",
+  "complaint": {
+    "claim": "The response used a rule for a different facility.",
+    "scope": "this recorded incident"
+  },
+  "task_contract": "For facility Cedar, compare concentration to the current facility-specific fictional limit; report pass only when concentration <= limit.",
+  "evidence": [
+    {
+      "evidence_id": "E1",
+      "kind": "source",
+      "content": "Cedar rule C7, current: limit 4 units."
+    },
+    {
+      "evidence_id": "E2",
+      "kind": "source",
+      "content": "Birch rule B2, current: limit 9 units."
+    },
+    {
+      "evidence_id": "E3",
+      "kind": "measurement",
+      "content": "Cedar sample: 6 units."
+    }
+  ],
+  "trace": {
+    "request": "Evaluate Cedar sample.",
+    "retrieval_candidates": [
+      "E1",
+      "E2"
+    ],
+    "selected_context": [
+      "E2",
+      "E3"
+    ],
+    "raw_model_output": "6 <= 9, so pass.",
+    "displayed_output": "pass"
+  },
+  "missing_evidence": [],
+  "permitted_actions": [
+    "read supplied artifacts",
+    "propose isolated tests; no test execution supplied"
+  ],
+  "notice": "Fictional rules and values; not regulatory advice."
+}
