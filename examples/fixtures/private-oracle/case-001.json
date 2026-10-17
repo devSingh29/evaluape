@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1-planning",
+  "case_id": "case-001",
+  "role": "illustrative scoring oracle; never investigator input",
+  "benchmark_eligible": false,
+  "split": "public-example-only",
+  "scenario_family": "wrong_retrieved_context",
+  "expected_adjudication": "substantiated",
+  "causal_locations": [
+    "retrieval/context_selection"
+  ],
+  "oracle_explanation": "The selected source belongs to Birch. Arithmetic follows that source; causal responsibility beyond selection is not established.",
+  "controlled_intervention_spec": {
+    "status": "proposed_not_executed",
+    "target": "selected_context",
+    "change": "Replace E2 with E1, holding measurement and decision logic fixed.",
+    "oracle_expected_outcome": "Fail; original context restores pass.",
+    "limits": "An expected counterfactual is not an observed test result."
+  },
+  "regression_spec": {
+    "faulted_variant_expectation": "Reject pass based on another facility source.",
+    "healthy_variant_expectation": "Accept fail citing Cedar C7.",
+    "status": "specification_only"
+  },
+  "scoring_notes": "Correct localization is context selection; do not claim a specific ranker implementation defect.",
+  "provenance": "Independently invented for this planning repository. No customer or Almic artifacts."
+}
